@@ -1,0 +1,629 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #feecd6;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo span {
+    color: #f39c12;
+}
+
+.nav-links {
+    display: flex;
+    gap: 80px;
+    font-weight: bolder;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #f39c12;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+}
+
+.icons i {
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.icons i:hover {
+    color: #333;
+}
+
+
+
+/* Hamburger Menu (Mobile View) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #feecd6;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        max-height: 0;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .nav-links.show {
+        max-height: 300px;
+    }
+
+    .hamburger {
+        display: flex;
+        order: 3;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+    .home-link, .product-link, .about-link, .contact-link {
+        display: none;
+    }
+
+    .nav-links.show .home-link, .nav-links.show .product-link, .nav-links.show .about-link, .nav-links.show .contact-link {
+        display: block;
+    }
+}
+
+/* Slider */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    height: 90vh;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    height: 700px;
+}
+
+.slide img {
+    width: 65%;
+    height: 600px;
+    margin-left: 450px;
+}
+
+.content {
+    position: absolute;
+    left: 40px;
+    background: rgb(248, 245, 239, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    height: 350px;
+    top: 120px;
+    width: 500px;
+    left: 110px;
+}
+
+.content h1 {
+    color: #f3923b;
+    font-size: 55px;
+    margin: 0 0 10px;
+}
+
+.content p {
+    color: #555;
+    line-height: 1.6;
+    font-weight:bold;
+    font-size: large;
+}
+
+.sopbtn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f3923b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.slide-buttons {
+    position: absolute;
+    bottom: 70px;
+    left: 490px;
+    
+}
+
+.slide-buttons button {
+    background: rgb(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #f3923b;
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+}
+
+.slide-indicator {
+    position: absolute;
+    bottom: 120px;
+    right: 200px;
+    color:white;
+    font-weight: bolder;
+
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .slider-container {
+        height: auto;
+    }
+
+    .slide {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .content {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 32px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .slide-buttons {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+    }
+
+    .slide-buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .slide-indicator {
+        bottom: 20px;
+        right: 20px;
+        font-size: 14px;
+    }
+}
+
+/* Trusted Companies */
+
+.logocontainer {
+    text-align: center;
+    background-color: white;
+}
+.title {
+    color: #6b7280;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.logo img {
+    height: 40px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .logos {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+}
+
+/* Grid */
+
+.gridcontainer {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+.left-section {
+    flex: 1;
+    position: relative;
+}
+.left-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.left-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+.gridslide-buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 630px;
+    
+}
+
+.gridslide-buttons button {
+    background:rgb(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #f3923b;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+.right-section {
+    flex: 1;
+    padding-left: 40px;
+    margin-top: 100px;
+}
+
+.nkcard {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #feecd6;
+    border-radius: 10px;
+    height: 220px;
+    width: 750px;
+}
+.nkcard img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.nkcard h3 {
+    margin: 0;
+    font-size: 20px;
+}
+.nkcard p {
+    margin: 5px 0;
+    color: #666;
+    font-weight: bold;
+    font-size: large;
+}
+.read-more {
+    color: #f59e42;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .gridcontainer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-section {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .gridslide-buttons {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .right-section {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .nkcard {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nkcard img {
+        margin: 20px 0;
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-section h2 {
+        font-size: 24px;
+    }
+
+    .gridslide-buttons button {
+        height: 40px;
+        width: 40px;
+        font-size: 24px;
+    }
+
+    .nkcard h3 {
+        font-size: 18px;
+    }
+
+    .nkcard p {
+        font-size: medium;
+    }
+}
+
+/* Products */
+
+.pro-container {
+    padding: 20px;
+}
+.mini{
+    display: flex;
+    justify-content: space-between;
+}
+.mini h2{
+    font-size: 2rem;
+}
+.mini h4{
+    color: #f3923b;
+}
+.pro-categories {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.category-btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.pro-card {
+    background: #fff8f1;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pr0-card img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.category {
+    font-size: 0.9rem;
+    color: #888;
+}
+.product-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.price {
+    color: #ff6600;
+    font-weight: bold;
+    background-color: rgb(255, 255, 0, 0.2);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 80px;
+    height: 40px;
+    width: 100px;
+    left: 40px;
+    border: none;
+}
+.cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+.footcontainer {
+    padding: 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #deb37d;
+    color: white;
+}
+
+.subscribe-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.subscribe-text {
+    max-width: 800px;
+    font-weight: bolder;
+}
+
+.subscribe-text h2 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.subscribe-text p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: bolder;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.subscribe-form button {
+    background: #F5A623;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    font-weight: bolder;
+}
+
+.subscribe-form button:hover {
+    background: #e8951c;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subscribe-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subscribe-form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        font-size: 14px;
+        padding-top: 10px; 
+    }
+
+    .footer div {
+        margin-top: 10px;
+    }
+
+    .footer a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}

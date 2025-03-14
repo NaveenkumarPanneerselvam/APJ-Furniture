@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatile Furniture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><span>APJ</span> Furniture</div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#" class="home-link">Home</a>
+
+            <div class="dropdown product-link">
+                <a href="#" class="dropdown-toggle">Product &#9662;</a>
+            </div>
+
+            <a href="#" class="about-link">About</a>
+            <a href="#" class="contact-link">Contact</a>
+        </div>
+
+        <div class="icons">
+            <i class="search"><img src="./Images/search.png" alt=""></i>
+            <i class="user"><img src="./Images/profile.png" alt=""></i>
+        </div>
+    </nav>
+
+    <!-- Slider -->
+    <div class="slider-container">
+        <div class="slide" id="slide">
+            <img src="./Images/pic1.jpg" alt="Modern Furniture">
+            <div class="content">
+                <h1>Help You To Make <br> Modern Furniture</h1>
+                <p>We help you to create organize your room to be <br> more cozy, design by professional interior <br> designer.</p>
+                <a href="#" class="sopbtn">See Our Product</a>
+            </div>
+        </div>
+       
+    
+        <div class="slide-buttons">
+            <button onclick="prevSlide()">&#60;</button>
+            <button onclick="nextSlide()">&#62;</button>
+        </div>
+    
+        <div class="slide-indicator" id="indicator">01 / 02</div>
+
+    </div>
+    
+
+    <!-- Trusted Companies -->
+
+    <div class="logocontainer">
+        <h2 class="title">Some of our trusted company</h2>
+
+        <div class="logos">
+            <div class="logo">
+                <img src="./Images/google.png" alt="Google">
+            </div>
+            <div class="logo">
+                <img src="./Images/tokopedia.png" alt="Tokopedia">
+            </div>
+            <div class="logo">
+                <img src="./Images/ticket.png" alt="Tiket.com">
+            </div>
+            <div class="logo">
+                <img src="./Images/microsoft.png" alt="Microsoft">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid -->
+
+    <div class="gridcontainer">
+        <div class="left-section">
+            <h2>Some of the interiors that we <br> provide for you</h2>
+            <img src="./Images/pic2.jpg" alt="Interior Image">
+            <div class="gridslide-buttons">
+                <button onclick="prevSlide()">&#60;</button>
+                <button onclick="nextSlide()">&#62;</button>
+            </div>
+        </div>
+
+        <div class="right-section">
+            
+            <div class="nkcard">
+                <img src="./Images/pic3.png" alt="Living Room">
+                <div>
+                    <h3>Living Room</h3>
+                    <p>As one of the most-frequented spots in the home a living room sets the tone for the rest of the house.</p><br><br>
+                    <a href="#" class="read-more">Read More ></a>
+                </div>
+            </div>
+
+            <div class="nkcard">
+                <img src="./Images/pic4.png" alt="Bedroom">
+                <div>
+                    <h3>Bedroom</h3>
+                    <p> Unleash your creativity to make not only comfortable but also a pleasant place to start and end your day.</p><br><br>
+                    <a href="#" class="read-more">Read More ></a>
+                </div>
+            </div>
+
+            <div class="nkcard">
+                <img src="./Images/pic5.png" alt="Office">
+                <div>
+                    <h3>Office</h3>
+                    <p>The home office design ideas featured here are maximized for efficiency, optimized for space, and improvised for comfort by Spacejoy designers.</p><br><br>
+                    <a href="#" class="read-more">Read More ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <div class="pro-container">
+        <div class="mini">
+            <h2>Products</h2>
+            <h4>See All →</h4>
+        </div>
+
+        <div class="pro-categories">
+            <button class="category-btn">All</button>
+            <button class="category-btn">Bed</button>
+            <button class="category-btn">Chair</button>
+            <button class="category-btn">Light</button>
+            <button class="category-btn">Sofa</button>
+        </div>
+
+        <div class="products">
+            <div class="pro-card">
+                <p class="category">Sofa</p>
+                <h3 class="product-name">Glossy Cube</h3>
+                <span class="cart-icon"><img src="./Images/cart.png" alt=""></span>
+                <img src="./Images/pic6.png" alt="Glossy Cube">
+                <button class="price">₹400.000</button>
+            </div>
+
+            <div class="pro-card">
+                <p class="category">Light</p>
+                <h3 class="product-name">Floor Monolamp</h3>
+                <span class="cart-icon"><img src="./Images/cart.png" alt=""></span>
+                <img src="./Images/pic7.png" alt="Floor Monolamp">
+                <button class="price">₹210.000</button>
+            </div>
+
+            <div class="pro-card">
+                <p class="category">Chair</p>
+                <h3 class="product-name">Vintage Chair</h3>
+                <span class="cart-icon"><img src="./Images/cart.png" alt=""></span>
+                <img src="./Images/pic8.png" alt="Vintage Chair">
+                <button class="price">₹410.000</button>
+            </div>
+
+            <div class="pro-card">
+                <p class="category">Bed</p>
+                <h3 class="product-name">Comfort King Bed</h3>
+                <span class="cart-icon"><img src="./Images/cart.png" alt=""></span>
+                <img src="./Images/pic9.png" alt="Comfort King Bed">
+                <button class="price">₹410.000</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+
+<div class="footcontainer">
+    <div class="subscribe-section">
+        <div class="subscribe-text">
+            <h2>Subscribe to get <br> the last news about us</h2>
+            <p>We recommend you to subscribe to our newspaper, <br> enter your email to get our daily update about us</p>
+        </div>
+
+        <div class="subscribe-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>PT. ANDARA PANCA JAYA<br>&copy; 2020. All rights reserved</p>
+        <div>
+            <a href="#">About Us</a>
+            <a href="#">Partnership</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
